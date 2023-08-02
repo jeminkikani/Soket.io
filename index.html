@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express-Socket</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <p>Hello World...</p>
+    <!-- <input type="text" id="che" name="message"> -->
+    <script>
+        // let msg =  document.getElementById('che').innerHTML;
+        const socket = io();
+        socket.on('newUser', (data)=>{
+                document.body.innerHTML = '';
+                document.write(msg);
+        })
+
+        // socket.on('User', (data)=>{
+        //         // document.body.innerHTML = '';
+        //         document.write(msg);
+        // })
+    //     setTimeout(()=>{
+    //     socket.send('Welcome to express and socket io page')
+    // },3000)
+      </script>
+      
+</body>
+</html>
