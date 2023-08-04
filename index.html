@@ -14,16 +14,16 @@
         const socket = io();
         socket.on('newUser', (data)=>{
                 document.body.innerHTML = '';
-                document.write(msg);
+                document.write(data.message);
         })
 
-        // socket.on('User', (data)=>{
-        //         // document.body.innerHTML = '';
-        //         document.write(msg);
-        // })
-    //     setTimeout(()=>{
-    //     socket.send('Welcome to express and socket io page')
-    // },3000)
+        socket.on('User', (data)=>{
+                // document.body.innerHTML = '';
+                document.write(msg);
+        })
+        setTimeout(()=>{
+        socket.send('Welcome to express and socket io page')
+    },3000)
       </script>
       
 </body>

@@ -20,13 +20,13 @@ io.on('connection', (socket)=>{
 
     socket.broadcast.emit('newUser', {message: user + 'is connected....'});
 
-    // setTimeout(()=>{
-    //     socket.send('Welcome to express and socket io page')
-    // },3000)
+    setTimeout(()=>{
+        socket.send('Welcome to express and socket io page')
+    },3000)
 
-    // socket.on('message', (data)=>{
-    //             console.log(data);
-    //     })
+    socket.on('message', (data)=>{
+                console.log(data);
+        })
 
     socket.emit('newMessage',{message: 'Sujal is Absent'})
     socket.on('disconnect', ()=>{
@@ -37,5 +37,5 @@ io.on('connection', (socket)=>{
 })
 
 server.listen(4545, ()=>{
-    console.log('Server started at 4545');
+    console.log('Server started at http://localhost:4545');
 })
